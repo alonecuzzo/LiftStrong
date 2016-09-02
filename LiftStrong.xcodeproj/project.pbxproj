@@ -14,6 +14,8 @@
 		0C8F127D1D776BD800EAA7ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C8F127B1D776BD800EAA7ED /* LaunchScreen.storyboard */; };
 		0C8F12881D776BD800EAA7ED /* LiftStrongTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8F12871D776BD800EAA7ED /* LiftStrongTests.swift */; };
 		0C8F12931D776BD800EAA7ED /* LiftStrongUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8F12921D776BD800EAA7ED /* LiftStrongUITests.swift */; };
+		0C8F12A31D7771F100EAA7ED /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C8F12A11D7771F100EAA7ED /* Fabric.framework */; };
+		0C8F12A41D7771F200EAA7ED /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C8F12A21D7771F100EAA7ED /* Crashlytics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		0C8F128E1D776BD800EAA7ED /* LiftStrongUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LiftStrongUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C8F12921D776BD800EAA7ED /* LiftStrongUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftStrongUITests.swift; sourceTree = "<group>"; };
 		0C8F12941D776BD800EAA7ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C8F12A11D7771F100EAA7ED /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		0C8F12A21D7771F100EAA7ED /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C8F12A41D7771F200EAA7ED /* Crashlytics.framework in Frameworks */,
+				0C8F12A31D7771F100EAA7ED /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +87,8 @@
 				0C8F12861D776BD800EAA7ED /* LiftStrongTests */,
 				0C8F12911D776BD800EAA7ED /* LiftStrongUITests */,
 				0C8F12701D776BD800EAA7ED /* Products */,
+				0C8F12A11D7771F100EAA7ED /* Fabric.framework */,
+				0C8F12A21D7771F100EAA7ED /* Crashlytics.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,6 +143,7 @@
 				0C8F126B1D776BD800EAA7ED /* Sources */,
 				0C8F126C1D776BD800EAA7ED /* Frameworks */,
 				0C8F126D1D776BD800EAA7ED /* Resources */,
+				0C8F12A01D7771DC00EAA7ED /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -193,6 +202,7 @@
 				TargetAttributes = {
 					0C8F126E1D776BD800EAA7ED = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = GGW8P5ZF85;
 					};
 					0C8F12821D776BD800EAA7ED = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -250,6 +260,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C8F12A01D7771DC00EAA7ED /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run ea826076f6464abcf65b67898f68b3ab3755c824 7e4fb60a026f99e708be70a52c2f266a93a89e9eebf8bb4c06602e34de677e6b";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0C8F126B1D776BD800EAA7ED /* Sources */ = {
@@ -401,6 +427,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = LiftStrong/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.codemitten.LiftStrong;
@@ -412,6 +443,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = LiftStrong/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.codemitten.LiftStrong;
